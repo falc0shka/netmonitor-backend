@@ -4,6 +4,7 @@ const userRoute = require('./user.route');
 const docsRoute = require('./docs.route');
 const hostsRoute = require('./hosts.route');
 const itemsRoute = require('./items.route');
+const otlichnikRoute = require('./otlichnik.route');
 const config = require('../../config/config');
 
 const router = express.Router();
@@ -24,6 +25,10 @@ const defaultRoutes = [
   {
     path: '/items',
     route: itemsRoute,
+  },
+  {
+    path: '/otlichnik',
+    route: otlichnikRoute,
   },
 ];
 

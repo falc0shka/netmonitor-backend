@@ -54,7 +54,7 @@ const randomUpdateItems = catchAsync(async () => {
   
 });
 
-setInterval(randomUpdateItems, 30000)
+setInterval(randomUpdateItems, 600000)
 
   
 });
