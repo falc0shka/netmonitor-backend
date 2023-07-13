@@ -13,11 +13,13 @@ const yooMoney = catchAsync(async (req, res) => {
   
   const params = new url.URLSearchParams(req.body);
   console.log(params.toString())
-  const result = (await axios.post('https://yoomoney.ru/eshop.xml', params.toString(), {
+  const result = await axios.post('https://yoomoney.ru/eshop.xml', params.toString(), {
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
     }
-  }))
+  })
+  console.log(result.request.res.responseUrl)
+
   //this.hosts = (await axios.get(`:/v1/hosts`)).data
   //const items = await itemsService.getItems()
   //console.log(result)
